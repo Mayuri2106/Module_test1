@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tie</title>
+    <link rel="stylesheet" href="tie_style.css">
+</head>
+
+<body>
+    <div class="Box-Container">
+        <ul>
+            <li>ROCK</li>
+            <li>PAPER</li>
+            <li>SCISSOR</li>
+        </ul>
+
+        <div class="Box1">
+            <p>COMPUTER SCORE</p>
+            <p id="Score1">0</p>
+        </div>
+        <div class="Box2">
+            <p>YOUR<br> SCORE</p>
+            <p id="Score2">0</p>
+        </div>
+    </div>
+
+    <div class="Image-Container">
+
+        <p class="Your-text">YOU PICKED</p>
+            <div class="Circle1-left">
+                <img class="Stone" id="tieuserChoiceimg" src="" alt="Stone">
+            </div>
+
+        <div class="Text">
+            <p class="Para1">TIE UP</p>
+            <a href="Index.html"> <button class="button2">REPLAY</button></a>
+        </div>
+        <p class="Pc-text">PC PICKED</p>
+            <div class="Circle1-right">
+                <img class="Stone" id="tiecomputerChoiceimg" src="" alt="Stone">
+            </div>
+    
+    </div>
+    <button id="toggleRules" onclick="toggleRules()">RULES</button>
+    
+    <div id="rules-box" style="display: none;">
+        <h2>Game Rules</h2>
+        <ul class="rules-list">
+            <li class="rule1">Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+            <li class="rule2">Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+            <li class="rule3">Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+            <li class="rule4">If both players lay down the same hand, each player lays down another hand</li>
+        </ul>
+    
+
+    <div class="closebtn">
+        <div class="top-img">
+            <img onclick="closeRules()" src="/image/X.png" alt="x">
+       </div>
+       <div class="bottom-img">
+        <img onclick="closeRules()" src="/image/closebtn.png" alt="x-btn">
+    </div> </div>
+
+</body>
+<script src="Script.js"></script>
+
+<!-- this script works locally to get element by id and set src attribute dynamically -->
+<script>
+    let img1 = document.getElementById('tieuserChoiceimg')
+    let img2 = document.getElementById('tiecomputerChoiceimg');
+    img1.src = localStorage.getItem('tieuserchoice');
+    img2.src = localStorage.getItem('tiecomputerchoice');
+</script>
+
+</html>

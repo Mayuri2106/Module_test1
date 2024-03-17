@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StonePaperScissor</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="Box-Container">
+        <ul>
+            <li>ROCK</li>
+            <li>PAPER</li>
+            <li>SCISSOR</li>
+        </ul>
+
+        <div class="Box1">
+            <p>COMPUTER SCORE</p>
+            <p id="Score1">0</p>
+        </div>
+        <div class="Box2">
+            <p>YOUR<br> SCORE</p>
+            <p id="Score2">0</p>
+        </div>
+    </div>
+    <img class="horizontal-line" src="/image/Line 1.png" alt="horizontal-line">
+    <img class="right-line" src="/image/Line 2.png" alt="right-line">
+    <img class="left-line" src="/image/Line 3.png" alt="left-line">
+    <div class="Choices">
+    <div class="Circle1">
+        <img  onclick="playGame('Stone')" class="Stone" src="/image/Stone.png" alt="Stone">
+    </div>
+    
+        <div class="Circle2">
+        <img onclick="playGame('Scissor')" class="Scissor" src="/image/Scissor.png" alt="Scissor">
+        </div>
+
+       <btton class="paperBtn" ><div class="Circle3">
+       <img onclick="playGame('Paper')" class="Paper"  src="/image/Paper.png" alt="Paper"></btton> 
+        </div>
+
+    </div>
+
+    <button id="toggleRules" onclick="toggleRules()">RULES</button>
+
+
+    
+    <div id="rules-box" style="display: none;">
+        <h2>Game Rules</h2>
+        <ul class="rules-list">
+            <li class="rule1">Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+            <li class="rule2">Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+            <li class="rule3">Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+            <li class="rule4">If both players lay down the same hand, each player lays down another hand</li>
+        </ul>
+    
+
+    <div class="closebtn">
+        <div class="top-img">
+            <img onclick="closeRules()" src="/image/X.png" alt="x">
+       </div>
+       <div class="bottom-img">
+        <img onclick="closeRules()" src="/image/closebtn.png" alt="x-btn">
+    </div> </div>
+
+    <script src="Script.js">    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You win</title>
+    <link rel="stylesheet" href="win_style.css">
+</head>
+
+<body>
+    <div class="Box-Container">
+        <ul>
+            <li>ROCK</li>
+            <li>PAPER</li>
+            <li>SCISSOR</li>
+        </ul>
+
+        <div class="Box1">
+            <p>COMPUTER SCORE</p>
+            <p id="Score1">0</p>
+        </div>
+        <div class="Box2">
+            <p>YOUR<br> SCORE</p>
+            <p id="Score2">0</p>
+        </div>
+    </div>
+
+    <div class="Image-Container">
+
+        <img class="Bottom1" src="/image/Bottom1.png" alt="">
+        <img class="Bottom2" src="/image/Bottom2.png" alt="">
+        <img class="Bottom3" src="/image/Bottom3 (1).png" alt="">
+        <p class="Your-text">YOU PICKED</p>
+            <div class="Circle2">
+                <img class="Scissor" id="winuserChoiceimg" src="" alt="Scissor">
+            </div>
+
+        <div class="Text">
+            <p class="Para1">YOU WIN</p>
+            <p class="Para2">AGAINST PC</p>
+            <a href="Index.html"><button class="button2">PLAY AGAIN</button></a>
+        </div>
+        <p class="Pc-text">PC PICKED</p>
+            <div class="Circle3">
+                <img class="Paper" id="wincomputerChoiceimg" src="" alt="Paper">
+            </div>
+    
+    </div>
+    <button id="toggleRules" onclick="toggleRules()">RULES</button>
+    <button class="button1-next" id="nextButton" onclick="">NEXT</button>
+     
+    <div id="rules-box" style="display: none;">
+        <h2>Game Rules</h2>
+        <ul class="rules-list">
+            <li class="rule1">Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+            <li class="rule2">Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+            <li class="rule3">Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+            <li class="rule4">If both players lay down the same hand, each player lays down another hand</li>
+        </ul>
+    
+
+    <div class="closebtn">
+        <div class="top-img">
+            <img onclick="closeRules()" src="/image/X.png" alt="x">
+       </div>
+       <div class="bottom-img">
+        <img onclick="closeRules()" src="/image/closebtn.png" alt="x-btn">
+    </div> </div>
+
+    
+
+</body>
+<script src="Script.js"></script>
+
+<!-- this script works locally to get element by id and set src attribute dynamically -->
+<script>
+    document.getElementById("nextButton").addEventListener("click", function() {
+    // Navigate to the hurray.html page
+    window.location.href = "Hurray.html";})
+    let img1 = document.getElementById('winuserChoiceimg')
+    let img2 = document.getElementById('wincomputerChoiceimg');
+    img1.src = localStorage.getItem('winuserchoice');
+    img2.src = localStorage.getItem('wincomputerchoice');
+</script>
+
+</html>
