@@ -1,10 +1,10 @@
 let userScore=0;
 let computerScore=0;
 
-let Stone = "/image/Stone.png";
-let Paper = "/image/Paper.png"; 
-let Scissor = "/image/Scissor.png";
-let imgbase = "/image/";
+let Stone = "image/Stone.png";
+let Paper = "image/Paper.png"; 
+let Scissor = "image/Scissor.png";
+let imgbase = "image/";
 
 
 //localStorage.clear()
